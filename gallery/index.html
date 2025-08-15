@@ -1,17 +1,49 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Gallery</title>
+  <meta charset="utf-8" />
+  <title>Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 24px; }
+    a { color: royalblue; }
+    .gallery { 
+      list-style: none; padding: 0; margin: 0;
+      display: grid; gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .gallery figure { margin: 0; }
+    .gallery img { width: 100%; height: auto; display: block; border-radius: 8px; }
+    .caption { margin-top: 6px; font-size: 0.9rem; color: #555; }
+    .back { display: inline-block; margin-top: 20px; }
+  </style>
 </head>
 <body>
-    <h1>Gallery</h1>
-    <ul style="list-style: none; padding-left: 0;">
-        <li style="margin-bottom: 10px;">
-        </li>
-        </li>
-    </ul>
-    </ul>
+  <h1>Gallery</h1>
 
-    <p><a href="/">Back</a></p>
+  <ul class="gallery">
+    <li>
+      <figure>
+        <a href="../assets/img/photo1.jpg">
+          <img src="../assets/img/photo1.jpg" alt="Describe photo 1" loading="lazy">
+        </a>
+        <figcaption class="caption">Caption for photo 1</figcaption>
+      </figure>
+    </li>
+
+    <!-- Duplicate the <li> block for more photos -->
+    <!--
+    <li>
+      <figure>
+        <a href="../assets/img/photo2.jpg">
+          <img src="../assets/img/photo2.jpg" alt="Describe photo 2" loading="lazy">
+        </a>
+        <figcaption class="caption">Caption for photo 2</figcaption>
+      </figure>
+    </li>
+    -->
+  </ul>
+
+  <p><a class="back" href="/">← Back</a></p>
 </body>
 </html>
