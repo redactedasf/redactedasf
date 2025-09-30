@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <title>images</title>
    <style>
+     .gallery {
+  list-style-type: none; /* no bullets */
+  padding-left: 0;
+  margin: 0;
+}
+
+.gallery li {
+  margin-bottom: 40px; /* space between rows */
+  text-align: center;  /* center content inside each row */
+}
+
+.gallery img {
+  max-width: 400px; /* adjust size */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 10px; /* space between image & caption */
+}
+
+.caption {
+  font-size: 0.95rem;
+  color: #555;
+  display: block;
+  text-align: center; /* center caption */
+}
+
     a:link {
       color: steelblue;       /* Unvisited links */
     }
