@@ -1,92 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <body style="background-color: black; color: white;">
+<head>
     <meta charset="UTF-8">
-    <title>images</title>
-   <style>
-    .gallery {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
+    <title>Gallery</title>
+    <style>
+        body {
+            background-color: white; /* white background */
+            color: black; /* text color for readability */
+            margin: 0;
+            font-family: sans-serif;
+        }
 
-.gallery li {
-  margin-bottom: 40px;
-  text-align: center;
-}
+        a:link, a:visited {
+            color: steelblue;
+        }
 
-.gallery img { 
-  width: 100%; 
-  height: auto; 
-  display: block; 
-  border-radius: 0; /* no rounded corners */
-}
+        a:hover {
+            color: darkorange;
+        }
 
+        .gallery {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center; /* centers images horizontally */
+        }
 
-.caption {
-  font-size: 0.95rem;
-  color: #555;
-  display: block;
-  text-align: center;
-}
+        .gallery li {
+            text-align: center; /* centers text below images */
+        }
 
-    a:link {
-      color: steelblue;       /* Unvisited links */
-    }
-    a:visited {
-      color: steelblue;      /* Visited links */
-    }
-    a:hover {
-      color: seashell;     /* When mouse hovers over */
-    }
-       ul {
-    list-style-type: none; /* removes bullets */
-    padding-left: 0; /* removes left indent */
-  }
+        .gallery img {
+            width: 200px; /* adjust size */
+            height: auto;
+            border-radius: 0; /* square corners */
+            display: block;
+            margin: 0 auto; /* center image */
+        }
 
-  display: grid; gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-  .gallery figure { margin: 0; }
-  .gallery img { width: 100%; height: auto; display: block; border-radius: 8px; }
-  .caption { margin-top: 6px; font-size: 0.9rem; color: #555; }
-  .back { display: inline-block; margin-top: 20px; }
-</style>
-    
-  </head>
-  <body>
+        .caption {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: black; /* readable on white */
+        }
 
-  <h1>Gallery</h1>
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
 
- <ul class="gallery">
-  <li>
-    <figure>
-      <a href="1.JPEG">
-        <img src="1.JPEG" alt="Moon" loading="lazy">
-      </a>
-      <figcaption class="caption">Embercombe moon, the third night</figcaption>
-    </figure>
-  </li>
+    <h1>Gallery</h1>
 
-  <li>
-    <figure>
-      <a href="2.JPEG">
-        <img src="2.JPEG" alt="Photo 2" loading="lazy">
-      </a>
-      <figcaption class="caption">Solomon Greer-Collins, Blaise Castle</figcaption>
-    </figure>
-  </li>
+    <ul class="gallery">
+        <li>
+            <a href="1.JPEG">
+                <img src="1.JPEG" alt="Moon" loading="lazy">
+            </a>
+            <span class="caption">Embercombe moon, the third night</span>
+        </li>
+        <li>
+            <a href="2.JPEG">
+                <img src="2.JPEG" alt="Photo 2" loading="lazy">
+            </a>
+            <span class="caption">Solomon Greer-Collins, Blaise Castle</span>
+        </li>
+        <li>
+            <a href="3.JPEG">
+                <img src="3.JPEG" alt="Photo 3" loading="lazy">
+            </a>
+            <span class="caption">The geometry of love</span>
+        </li>
+    </ul>
 
-  <li>
-    <figure>
-      <a href="3.JPEG">
-        <img src="3.JPEG" alt="Photo 3" loading="lazy">
-      </a>
-      <figcaption class="caption">The geometry of love</figcaption>
-    </figure>
-  </li>
+    <p><a class="back" href="/">← Back</a></p>
 
-  <p><a class="back" href="/">← Back</a></p>
 </body>
 </html>
+
